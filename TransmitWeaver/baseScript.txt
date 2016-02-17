@@ -1,0 +1,5 @@
+tell application "Transmit"
+    tell current tab of (make new document at end)
+        connect to address "{{HOST}}" as user "{{USERNAME}}" with initial path "{{PATH}}" with password "{{PASSWORD}}" with protocol "{{PROTOCOL}}"
+    end tell
+end tell

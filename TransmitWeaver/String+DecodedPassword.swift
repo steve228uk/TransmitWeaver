@@ -19,7 +19,7 @@ extension String {
         var characters: [Character] = []
         for (index, char) in [Character](self.characters).chunk(2).enumerate() {
             let string = String(char)
-            let code = Int(strtoul(string, nil, 16)) - index
+            let code = Int(string, radix: 16)! - index
             characters.append(Character(UnicodeScalar(code)))
         }
         
